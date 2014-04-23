@@ -24,12 +24,13 @@
     "url": "git://github.com/shootaroo/jit-grunt.git"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "node example/subproject/install.js"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.3.3",
     "grunt-espower": "~0.5.0",
     "grunt-jscs-checker": "~0.4.0",
     "grunt-mocha-test": "~0.10.0",

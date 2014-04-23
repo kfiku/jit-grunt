@@ -37,8 +37,11 @@ module.exports = function (grunt) {
         },
         src: ['build/**/*.js']
       }
+    },
+    nodeunit: {
+      tests: ['test/*_test.js'],
     }
   });
 
-  grunt.registerTask('default', ['jscs', 'jshint', 'espower', 'mochaTest']);
+  grunt.registerTask('default', ['jscs', 'jshint', 'espower', 'nodeunit', 'mochaTest']);
 };

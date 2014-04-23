@@ -1,0 +1,10 @@
+{
+  "name": "jit-grunt",
+  "version": "0.5.0",
+  "devDependencies": {
+    "grunt-twigtojst": "~0.1.3"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
