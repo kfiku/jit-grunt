@@ -1,6 +1,6 @@
 {
-  "name": "jit-grunt",
-  "version": "0.5.0",
+  "name": "jit-grunt-SubprojectExample-subproject",
+  "version": "0.1.0",
   "devDependencies": {
     "grunt-twigtojst": "~0.1.3"
   },

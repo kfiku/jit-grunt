@@ -136,4 +136,21 @@ describe('Plugin find', function () {
     assert(!stub.calledWith(path.resolve('node_modules/grunt-foo/tasks')));
     assert(!stub.calledWith(path.resolve('node_modules/foo/tasks')));
   });
+
+  it('Other node_modules dir', function () {
+    stub.withArgs(path.resolve('other/dir/node_modules/grunt-contrib-foo/tasks')).returns(false);
+    stub.withArgs(path.resolve('other/dir/node_modules/grunt-foo/tasks')).returns(false);
+    stub.withArgs(path.resolve('other/dir/node_modules/foo/tasks')).returns(true);
+
+    // changing mode_modules dir
+    jit.changeModulesRoot('other/dir/node_modules');
+    assert(jit.findPlugin('foo'));
+
+    assert(stub.calledWith(path.resolve('other/dir/node_modules/grunt-contrib-foo/tasks')));
+    assert(stub.calledWith(path.resolve('other/dir/node_modules/grunt-foo/tasks')));
+    assert(stub.calledWith(path.resolve('other/dir/node_modules/foo/tasks')));
+
+    // back to default
+    jit.changeModulesRoot('node_modules');
+  });
 });

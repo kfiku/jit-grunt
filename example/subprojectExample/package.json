@@ -1,0 +1,13 @@
+{
+  "name": "jit-grunt-SubprojectExample",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4"
+  },
+  "scripts": {
+    "postinstall": "node subproject/install.js"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
