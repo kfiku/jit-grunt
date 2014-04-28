@@ -1,7 +1,6 @@
-'use strict';
-
 module.exports = function(grunt) {
-
+  'use strict';
+  
   require('../../lib/jit-grunt')(grunt).changeModulesRoot('subproject/node_modules');
 
   grunt.initConfig({
