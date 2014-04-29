@@ -10,5 +10,9 @@ module.exports = function (grunt, mappings) {
     if (options.loadTasks) {
       jit.loadTasks = path.resolve(options.loadTasks);
     }
+
+    if (options.nodeModules) {
+      jit.nodeModules(options.nodeModules);
+    }
   };
 };

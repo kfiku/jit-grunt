@@ -2,7 +2,9 @@
 
 module.exports = function(grunt) {
 
-  require('../../lib/jit-grunt')(grunt).changeModulesRoot('subproject/node_modules');
+  require('../../jit-grunt')(grunt)({
+    nodeModules: 'subproject/node_moduless'
+  });
 
   grunt.initConfig({
     twigtojst: {

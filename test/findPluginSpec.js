@@ -143,7 +143,7 @@ describe('Plugin find', function () {
     stub.withArgs(path.resolve('other/dir/node_modules/foo/tasks')).returns(true);
 
     // changing mode_modules dir
-    jit.changeModulesRoot('other/dir/node_modules');
+    jit.nodeModules('other/dir/node_modules', true);
     assert(jit.findPlugin('foo'));
 
     assert(stub.calledWith(path.resolve('other/dir/node_modules/grunt-contrib-foo/tasks')));
@@ -151,6 +151,6 @@ describe('Plugin find', function () {
     assert(stub.calledWith(path.resolve('other/dir/node_modules/foo/tasks')));
 
     // back to default
-    jit.changeModulesRoot('node_modules');
+    jit.nodeModules('node_modules', true);
   });
 });

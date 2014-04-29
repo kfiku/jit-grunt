@@ -116,7 +116,9 @@ require('jit-grunt')(grunt, {
 You can chagne dir where grunt-tasks are stored.
 
 ```js
-require('jit-grunt')(grunt).changeModulesRoot('subproject/node_modules');
+require('jit-grunt')(grunt)({
+  nodeModules: 'subproject/node_moduless'
+});
 ```
 
 example [here](https://github.com/shootaroo/jit-grunt/tree/master/example/subprojectExample)
